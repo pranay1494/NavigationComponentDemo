@@ -16,7 +16,7 @@ class FragmentC :Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         btnToC.setOnClickListener {view->
-            view.findNavController().navigate(FragmentCDirections.actionFragmentCToFragmentD())
+            view.findNavController().navigate(FragmentCDirections.actionFragmentCToFragmentD("bansal"))
         }
     }
 }

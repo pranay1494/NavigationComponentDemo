@@ -13,15 +13,19 @@
     </fragment>
     <fragment android:id="@+id/fragmentD" android:name="com.example.navigationdemo.FragmentD"
               android:label="FragmentD"
-              tools:layout="@layout/fragment_d"/>
+              tools:layout="@layout/fragment_d">
+        <argument android:name="username" app:argType="string"/>
+    </fragment>
     <fragment android:id="@+id/fragmentB" android:name="com.example.navigationdemo.FragmentB"
               android:label="FragmentB"
               tools:layout="@layout/fragment_b">
-        <action android:id="@+id/action_fragmentB_to_fragmentD" app:destination="@id/fragmentD"/>
+        <action android:id="@+id/action_fragmentB_to_fragmentD" app:destination="@id/fragmentD"
+                app:popUpTo="@+id/fragmentA" app:popUpToInclusive="false"/>
     </fragment>
     <fragment android:id="@+id/fragmentC" android:name="com.example.navigationdemo.FragmentC"
               android:label="FragmentC"
               tools:layout="@layout/fragment_c">
-        <action android:id="@+id/action_fragmentC_to_fragmentD" app:destination="@id/fragmentD"/>
+        <action android:id="@+id/action_fragmentC_to_fragmentD" app:destination="@id/fragmentD"
+                app:popUpTo="@+id/fragmentA" app:popUpToInclusive="true"/>
     </fragment>
 </navigation>

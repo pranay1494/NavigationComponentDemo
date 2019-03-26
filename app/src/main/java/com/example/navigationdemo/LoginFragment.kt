@@ -6,17 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.fragment_b.*
+import kotlinx.android.synthetic.main.fragment_login.*
 
-class FragmentB : Fragment() {
+class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_b,container,false)
+        return inflater.inflate(R.layout.fragment_login,container,false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        btnToC.setOnClickListener { view ->
-            view.findNavController().navigate(FragmentBDirections.ActionFragmentBToFragmentD("pranay"))
+        button.setOnClickListener {view ->
+            view.findNavController()
         }
     }
 }
