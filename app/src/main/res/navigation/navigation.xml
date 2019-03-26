@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/navgraph" app:startDestination="@id/fragmentA">
 
     <fragment android:id="@+id/fragmentA" android:name="com.example.navigationdemo.FragmentA"
-              android:label="FragmentA"/>
+              android:label="FragmentA"
+              tools:layout="@layout/fragment_a"
+    >
+        <action android:id="@+id/action_fragmentA_to_fragmentB" app:destination="@id/fragmentB"/>
+        <action android:id="@+id/action_fragmentA_to_fragmentC" app:destination="@id/fragmentC"/>
+    </fragment>
     <fragment android:id="@+id/fragmentD" android:name="com.example.navigationdemo.FragmentD"
-              android:label="FragmentD"/>
+              android:label="FragmentD"
+              tools:layout="@layout/fragment_d"/>
+    <fragment android:id="@+id/fragmentB" android:name="com.example.navigationdemo.FragmentB"
+              android:label="FragmentB"
+              tools:layout="@layout/fragment_b">
+        <action android:id="@+id/action_fragmentB_to_fragmentD" app:destination="@id/fragmentD"/>
+    </fragment>
+    <fragment android:id="@+id/fragmentC" android:name="com.example.navigationdemo.FragmentC"
+              android:label="FragmentC"
+              tools:layout="@layout/fragment_c">
+        <action android:id="@+id/action_fragmentC_to_fragmentD" app:destination="@id/fragmentD"/>
+    </fragment>
 </navigation>
