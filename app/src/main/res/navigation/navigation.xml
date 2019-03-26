@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navgraph" app:startDestination="@id/fragmentA">
+
+    <fragment android:id="@+id/fragmentA" android:name="com.example.navigationdemo.FragmentA"
+              android:label="FragmentA"/>
+    <fragment android:id="@+id/fragmentD" android:name="com.example.navigationdemo.FragmentD"
+              android:label="FragmentD"/>
+</navigation>
